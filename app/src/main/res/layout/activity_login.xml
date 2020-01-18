@@ -27,6 +27,7 @@
                 android:layout_below="@+id/topimage"
                 app:cardUseCompatPadding="true"
                 android:layout_height="wrap_content">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:padding="10dp"
@@ -81,6 +82,11 @@
                android:id="@+id/button_login"
                android:foregroundGravity="center"
                android:text="@string/login"
+               android:textColor="#fff"
+               android:paddingLeft="40dp"
+               android:paddingRight="40dp"
+               android:fontFamily="@font/overpass_semibold"
+               android:background="@drawable/button_bg"
                android:layout_below="@+id/card"
                android:layout_marginTop="8dp"
                android:layout_centerHorizontal="true"/>
@@ -99,6 +105,10 @@
                 android:id="@+id/button_signup"
                 android:foregroundGravity="center"
                 android:text="@string/signup"
+                android:textColor="#fff"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:background="@drawable/button_bg"
                 android:layout_below="@+id/or"
                 android:layout_marginTop="8dp"
                 android:layout_centerHorizontal="true"/>

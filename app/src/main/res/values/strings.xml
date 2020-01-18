@@ -3,8 +3,9 @@
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="login">Login</string>
-    <string name="or">or</string>
-    <string name="signup">signUp</string>
+    <string name="or">Or</string>
+    <string name="signup">Sign Up</string>
+    <string name="cd">content desc</string>
     <string name="LOGIN">LOGIN</string>
     <string name="submit">Submit</string>
     <string name="name">name</string>

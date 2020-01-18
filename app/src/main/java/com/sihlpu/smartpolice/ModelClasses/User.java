@@ -2,9 +2,10 @@ package com.sihlpu.smartpolice.ModelClasses;
 
 public class User {
 
-    private String email,uid,name,gender,mobileno;
+    private String email,uid,name,mobileno;
+    private long gender;
 
-    public User(String email, String uid, String name, String gender, String mobileno) {
+    public User(String email, String uid, String name, long gender, String mobileno) {
         this.email = email;
         this.uid = uid;
         this.name = name;
@@ -39,11 +40,11 @@ public class User {
         this.name = name;
     }
 
-    public String getGender() {
+    public long getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(long gender) {
         this.gender = gender;
     }
 

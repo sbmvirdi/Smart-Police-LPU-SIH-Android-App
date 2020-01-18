@@ -13,7 +13,7 @@ import com.sihlpu.smartpolice.R;
 import java.util.ArrayList;
 
 public class SignUpActivity extends AppCompatActivity {
-EditText name,email,phone;
+    EditText name,email,phone;
 Spinner gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ Spinner gender;
         arrayList.add("Female");
         arrayList.add("Others");
         ArrayAdapter<String>ar= new ArrayAdapter
-                <>(this, android.R.layout.simple_spinner_item, arrayList);
+                <>(this, android.R.layout.simple_list_item_1, arrayList);
         gender.setAdapter(ar);
     }
 }
