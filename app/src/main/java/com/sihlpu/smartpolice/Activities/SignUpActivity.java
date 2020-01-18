@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.sihlpu.smartpolice.R;
 
@@ -22,6 +23,10 @@ Spinner gender;
         email=findViewById(R.id.userEmailSignup);
         phone=findViewById(R.id.phoneNumber);
         gender=findViewById(R.id.gender);
+        if(email.getText().toString().isEmpty()||name.getText().toString().isEmpty()
+                ||phone.getText().toString().isEmpty()){
+            Toast.makeText(this, "Please fill all the Fields", Toast.LENGTH_SHORT).show();
+        }
         ArrayList<String>arrayList=new ArrayList<>();
         arrayList.add("Male");
         arrayList.add("Female");
