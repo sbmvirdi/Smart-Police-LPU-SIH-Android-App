@@ -92,6 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
+                    android:inputType="textEmailAddress"
                     android:fontFamily="@font/overpass_semibold"
                     android:id="@+id/userEmailSignup"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -102,12 +103,16 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/phoneNumberLayout"
                 android:layout_marginTop="7dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
                 android:layout_below="@+id/emailLayoutSignUp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:maxLength="10"
+                    android:inputType="phone"
                     android:layout_height="wrap_content"
                     android:hint="@string/phone_number"
                     android:maxLength="10"
