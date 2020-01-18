@@ -111,8 +111,6 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:maxLength="10"
-                    android:inputType="phone"
                     android:layout_height="wrap_content"
                     android:hint="@string/phone_number"
                     android:maxLength="10"
@@ -152,7 +150,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/already"
                 android:textColor="#000000"
-                android:id="@+id/signin"
+                android:id="@+id/signintext"
                 android:fontFamily="@font/overpass_semibold"
                 android:text="@string/signin"
                 />
