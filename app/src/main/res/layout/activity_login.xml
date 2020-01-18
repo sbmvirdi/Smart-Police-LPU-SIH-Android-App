@@ -60,12 +60,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/passwordlayout"
+                        app:endIconMode="password_toggle"
                         android:layout_below="@+id/usernamelayout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/password"
+                            android:inputType="textPassword"
+
                             android:fontFamily="@font/overpass_semibold"
                             android:hint="@string/password" >
                         </com.google.android.material.textfield.TextInputEditText>
