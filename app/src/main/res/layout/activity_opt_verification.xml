@@ -46,6 +46,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/otpsubmission"
                     android:hint="@string/enter_otp"
+                    android:fontFamily="@font/overpass_semibold"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <Button
