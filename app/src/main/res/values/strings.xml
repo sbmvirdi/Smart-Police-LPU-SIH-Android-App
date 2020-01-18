@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">Smart Police</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
     <string name="login">Login</string>
     <string name="or">Or</string>
-    <string name="signup">sign Up</string>
+    <string name="signup">Sign Up</string>
     <string name="cd">content desc</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="submit">Submit</string>
+    <string name="name">name</string>
+    <string name="Name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="signin"><u>SignIn</u></string>
+    <string name="gender">Gender :</string>
+    <string name="Signup">SignUp</string>
 </resources>
