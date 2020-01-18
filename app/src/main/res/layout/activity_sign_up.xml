@@ -61,33 +61,25 @@
                 android:layout_below="@+id/nameLayoutSignUp"
                 android:text="@string/gender"
                 android:textSize="15sp"
-                android:padding="6dp"
                 android:fontFamily="@font/overpass_semibold"
                 android:layout_marginTop="8dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="0dp"
                 />
             <androidx.appcompat.widget.AppCompatSpinner
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_marginTop="7dp"
                 android:layout_below="@+id/nameLayoutSignUp"
                 android:id="@+id/gender"
-                android:layout_marginLeft="10dp"
-                android:spinnerMode="dropdown"
-                android:background="@drawable/spinner_bg"
                 android:layout_toEndOf="@+id/gendertitle"
-                android:layout_height="35dp"/>
-
-
+                android:layout_height="wrap_content"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/gender"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="7dp"
                 android:id="@+id/emailLayoutSignUp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -96,8 +88,6 @@
                     android:fontFamily="@font/overpass_semibold"
                     android:id="@+id/userEmailSignup"/>
             </com.google.android.material.textfield.TextInputLayout>
-
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,33 +97,24 @@
                 app:counterMaxLength="10"
                 android:layout_below="@+id/emailLayoutSignUp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/phone_number"
-                    android:maxLength="10"
-                    android:inputType="number"
                     android:fontFamily="@font/overpass_semibold"
                     android:id="@+id/phoneNumber"/>
-
-
             </com.google.android.material.textfield.TextInputLayout>
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:textSize="15sp"
                 android:text="@string/submit"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:textColor="#fff"
-                android:background="@drawable/button_bg"
                 android:fontFamily="@font/overpass_semibold"
                 android:id="@+id/submit"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/phoneNumberLayout"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="7dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -143,7 +124,6 @@
                 android:text="@string/already_have_an_account"
                 android:fontFamily="@font/overpass_semibold"
                 android:layout_centerHorizontal="true"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
