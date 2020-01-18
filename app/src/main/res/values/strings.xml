@@ -5,4 +5,14 @@
     <string name="login">Login</string>
     <string name="or">or</string>
     <string name="signup">signUp</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="submit">Submit</string>
+    <string name="name">name</string>
+    <string name="Name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="signin"><u>SignIn</u></string>
+    <string name="gender">Gender :</string>
+    <string name="Signup">SignUp</string>
 </resources>
