@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Smart Police</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="or">or</string>
+    <string name="signup">signUp</string>
 </resources>
