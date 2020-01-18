@@ -13,7 +13,8 @@
         android:layout_height="200dp"
         android:src="@drawable/ic_undraw_fingerprint_swrc"
         app:layout_constraintBottom_toTopOf="@+id/card_signup"
-        android:id="@+id/signupimage"/>
+        android:id="@+id/signupimage"
+        android:contentDescription="@string/app_name" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         app:cardCornerRadius="15dp"

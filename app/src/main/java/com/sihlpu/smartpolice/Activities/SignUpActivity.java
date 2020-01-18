@@ -26,8 +26,8 @@ Spinner gender;
         arrayList.add("Male");
         arrayList.add("Female");
         arrayList.add("Others");
-        ArrayAdapter<String>ar=new ArrayAdapter
-                <String>(this,android.R.layout.simple_spinner_item,arrayList);
+        ArrayAdapter<String>ar= new ArrayAdapter
+                <>(this, android.R.layout.simple_spinner_item, arrayList);
         gender.setAdapter(ar);
     }
 }
