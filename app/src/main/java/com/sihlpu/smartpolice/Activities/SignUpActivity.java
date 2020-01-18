@@ -2,12 +2,14 @@ package com.sihlpu.smartpolice.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sihlpu.smartpolice.R;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 
 public class SignUpActivity extends AppCompatActivity {
     EditText name, email, phone, aadhar;
+    TextView signin;
     Spinner gender;
     Button submit;
 
@@ -29,6 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
         gender = findViewById(R.id.gender);
         aadhar = findViewById(R.id.aadharNumber);
         submit=findViewById(R.id.submit);
+        signin=findViewById(R.id.signin);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +40,13 @@ public class SignUpActivity extends AppCompatActivity {
                         || phone.getText().toString().isEmpty() || aadhar.getText().toString().isEmpty()) {
                     Toast.makeText(SignUpActivity.this, "Please fill all the Fields", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(SignUpActivity.this,LoginActivity.class);
+                startActivity(i);
             }
         });
 
