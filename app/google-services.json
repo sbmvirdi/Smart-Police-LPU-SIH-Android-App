@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "909368830446",
+    "firebase_url": "https://smart-police-c436a.firebaseio.com",
+    "project_id": "smart-police-c436a",
+    "storage_bucket": "smart-police-c436a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909368830446:android:fbe7c8e9e557adc76306ff",
+        "android_client_info": {
+          "package_name": "com.sihlpu.smartpolice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909368830446-2g4n5q2mhe83e647sd4njf0a5g1pqa14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sihlpu.smartpolice",
+            "certificate_hash": "0e91da3bee33158bdad8f4fa3fcdf9665a11fc1d"
+          }
+        },
+        {
+          "client_id": "909368830446-hlavajrqj51b5vj8kqncd5jc943g0ndp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJPK_3pzbm1n7KyIi4pAcUrhI0mKlapLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909368830446-hlavajrqj51b5vj8kqncd5jc943g0ndp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
