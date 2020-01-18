@@ -23,9 +23,6 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.SliderVH> {
 
 
 
-
-
-
     @Override
     public int getCount() {
         return 3;

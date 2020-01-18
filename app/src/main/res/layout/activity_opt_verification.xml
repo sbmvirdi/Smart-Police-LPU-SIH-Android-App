@@ -27,7 +27,35 @@
             android:layout_height="match_parent">
            <TextView
                android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>
+               android:layout_height="wrap_content"
+               android:id="@+id/otpsent"
+               android:text="@string/please_enter_the_otp_sent_to_your_phone_number"
+               android:gravity="center"
+               android:layout_centerHorizontal="true"
+               android:fontFamily="@font/overpass_semibold"
+               />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/otpsent"
+                android:id="@+id/otpsubmitterLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/otpsubmission"
+                    android:hint="@string/enter_otp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/otpsubmitterLayout"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/submit_otp"
+                android:layout_margin="10dp"
+                android:text="@string/submit"/>
 
 
 

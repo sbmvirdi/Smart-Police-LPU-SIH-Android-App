@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Smart Police</string>
-    <string name="username">username</string>
-    <string name="password">password</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="or">Or</string>
     <string name="signup">Sign Up</string>
@@ -16,4 +16,7 @@
     <string name="signin"><u>SignIn</u></string>
     <string name="gender">Gender :</string>
     <string name="Signup">SignUp</string>
+    <string name="aadhar_number">Aadhar Number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="please_enter_the_otp_sent_to_your_phone_number">Please Enter the OTP sent to your phone number</string>
 </resources>

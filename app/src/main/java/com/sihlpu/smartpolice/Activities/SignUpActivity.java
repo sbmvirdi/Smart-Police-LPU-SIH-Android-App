@@ -18,10 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.sihlpu.smartpolice.ModelClasses.User;
+import com.sihlpu.smartpolice.Activities.Citizens.MainActivity;
 import com.sihlpu.smartpolice.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -32,7 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText name,email,phone;
     private long gender_value;
     private FirebaseAuth mAuth;
-Spinner gender;
+    Spinner gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,13 +38,13 @@ Spinner gender;
         name=findViewById(R.id.userNameSignUp);
         email=findViewById(R.id.userEmailSignup);
         phone=findViewById(R.id.phoneNumber);
-        signintext = findViewById(R.id.signintext);
+        signintext = findViewById(R.id.signin);
         gender=findViewById(R.id.gender);
         submit = findViewById(R.id.submit);
 
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() !=null){
-            Intent i = new Intent(SignUpActivity.this,MainActivity.class);
+            Intent i = new Intent(SignUpActivity.this, MainActivity.class);
             startActivity(i);
             finish();
         }

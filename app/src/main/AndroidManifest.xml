@@ -11,6 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activities.Citizens.StateServices"></activity>
+        <activity android:name=".Activities.Citizens.Status" />
+        <activity android:name=".Activities.Citizens.Verifications" />
+        <activity android:name=".Activities.Citizens.Noc" />
+        <activity android:name=".Activities.Citizens.kysActivity" />
+        <activity android:name=".Activities.Citizens.KypActivity" />
+        <activity android:name=".Activities.Citizens.StolenRecovered" />
+        <activity android:name=".Activities.Citizens.FirActivity" />
         <activity android:name=".Activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +29,7 @@
         <activity android:name=".Activities.OptVerification" />
         <activity android:name=".Activities.SignUpActivity" />
         <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.MainActivity">
-
-        </activity>
+        <activity android:name=".Activities.Citizens.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
