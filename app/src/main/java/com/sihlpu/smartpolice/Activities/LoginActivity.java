@@ -3,6 +3,7 @@ package com.sihlpu.smartpolice.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,8 +21,13 @@ Button login,signUp;
         password=findViewById(R.id.password);
         login=findViewById(R.id.button_login);
         signUp=findViewById(R.id.button_signup);
-        if(username.getText().toString().isEmpty()||password.getText().toString().isEmpty()){
-            Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
-        }
+       login.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               if(username.getText().toString().isEmpty()||password.getText().toString().isEmpty()){
+                   Toast.makeText(LoginActivity.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
+               }
+           }
+       });
     }
 }
