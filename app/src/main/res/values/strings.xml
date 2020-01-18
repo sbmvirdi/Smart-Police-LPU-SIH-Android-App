@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Smart Police</string>
-    <string name="cd">imageplaceholdet</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or">Or</string>
+    <string name="signup">sign Up</string>
+    <string name="cd">content desc</string>
 </resources>
