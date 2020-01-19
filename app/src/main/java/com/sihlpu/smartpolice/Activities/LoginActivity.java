@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,7 +26,8 @@ import com.sihlpu.smartpolice.R;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText username,password;
-    private Button login,signUp;
+    private Button login;
+    private TextView signup_text;
     private FirebaseAuth mAuth;
     private ProgressDialog progress;
     @Override
@@ -35,7 +37,8 @@ public class LoginActivity extends AppCompatActivity {
         username=findViewById(R.id.username);
         password=findViewById(R.id.password);
         login=findViewById(R.id.button_login);
-        signUp=findViewById(R.id.button_signup);
+        signup_text =findViewById(R.id.signup_text);
+
         progress = new ProgressDialog(this);
         progress.setMessage("Please wait while we log you in");
         progress.hide();
@@ -52,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
 
                String email = username.getText().toString().trim();
                String pass = password.getText().toString().trim();
-               if(TextUtils.isEmpty(email)|| TextUtils.isEmpty(pass)){
+               if(TextUtils.isEmpty(email)&& TextUtils.isEmpty(pass)){
                    Toast.makeText(LoginActivity.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
                }else if (TextUtils.isEmpty(email)){
                    username.setError("Enter Email");
@@ -90,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
        });
 
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        signup_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this,SignUpActivity.class);

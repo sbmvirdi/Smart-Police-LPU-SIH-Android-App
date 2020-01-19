@@ -1,9 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activities.Citizens.FirActivity">
+    android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".Adapters.efir">
+
+            <TextView
+                android:id="@+id/headingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center"
+                android:text="E-FIR"
+                android:textSize="30sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameFirLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headingTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameFir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:hint="Full Name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/DOBLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameFirLayout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/DOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/date"
+                    android:drawablePadding="5dp"
+                    android:inputType="text"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:hint="Date of Birth" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/gendertextFir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DOBLayout"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:text="Gender"
+                android:padding="10dp"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/gender"
+                android:layout_width="200dp"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="40dp"
+                android:layout_below="@+id/DOBLayout"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/gendertextFir" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailFirLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailFir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:hint="Email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailFirLayout"
+                android:fontFamily="@font/overpass_semibold"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:text="Mobile: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/mobilenumbertobe_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailFirLayout"
+                android:layout_toEndOf="@id/mobile"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/addressFir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:text="Full Address"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.7dp"
+                android:layout_below="@+id/addressFir"
+                android:layout_marginTop="5dp"
+                android:background="#000" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/villageFirLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressFir"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/villageFir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:hint="Village" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/districtFirLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/villageFirLayout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/distrcitFir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:hint="District" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/districtFirLayout"
+                android:fontFamily="@font/overpass_semibold"
+                android:paddingStart="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="0dp"
+                android:text="Country: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/countrycode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/districtFirLayout"
+                android:layout_toEndOf="@id/country"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="India"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/districtFirLayout"
+                android:layout_toEndOf="@id/countrycode"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:text="State: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/statecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/districtFirLayout"
+                android:layout_toEndOf="@id/state"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="Punjab"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/police_stationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/countrycode"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:padding="10dp"
+                android:text="Police Station" />
+
+            <Spinner
+                android:id="@+id/police_station"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/countrycode"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spinner_bg"
+                android:layout_toEndOf="@+id/police_stationText" />
+
+            <View
+                android:id="@+id/policeStationView"
+                android:layout_width="match_parent"
+                android:layout_height="1.7dp"
+                android:layout_below="@+id/police_stationText"
+                android:layout_marginTop="10dp"
+                android:background="#000" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/complaintFirLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/policeStationView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/complaintFir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:hint="Complaint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/firSubmit"
+                android:background="@drawable/button_bg"
+                android:layout_width="wrap_content"
+                android:paddingLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:paddingRight="40dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/complaintFirLayout"
+                android:layout_centerHorizontal="true"
+                android:text="Submit" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

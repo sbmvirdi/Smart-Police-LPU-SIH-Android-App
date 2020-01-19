@@ -68,7 +68,7 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.SliderVH> {
         }
 
         private void setData(String link,int pos){
-            Picasso.get().load(link).into(imageView);
+            Picasso.get().load(link).placeholder(R.drawable.placeholder).into(imageView);
             this.pos = pos;
         }
     }

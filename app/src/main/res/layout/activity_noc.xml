@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".Activities.Citizens.Noc">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply for NOC"
+        android:fontFamily="@font/overpass_semibold"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:id="@+id/label"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/namelayout"
+        android:layout_below="@+id/label"
+        android:layout_marginTop="40dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/name"
+            android:inputType="text"
+            android:textColor="#000"
+            android:fontFamily="@font/overpass_semibold"
+            android:hint="Name" >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobilelayout"
+        android:layout_below="@+id/namelayout"
+        app:counterMaxLength="10"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mobile"
+            android:inputType="number"
+            android:maxLength="10"
+            android:fontFamily="@font/overpass_semibold"
+            android:hint="Mobile No." >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addresslayout"
+        android:layout_below="@+id/mobilelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/address"
+            android:inputType="text"
+            android:textColor="#000"
+            android:fontFamily="@font/overpass_semibold"
+            android:hint="Address" >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of NOC:"
+        android:id="@+id/typeofnocLabel"
+        android:layout_below="@id/addresslayout"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:padding="10dp"
+        />
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/spinner_bg"
+        android:layout_toRightOf="@id/typeofnocLabel"
+        android:layout_below="@id/addresslayout"
+        android:id="@+id/typeofnoc"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@drawable/button_bg"
+        android:layout_below="@id/typeofnoc"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:id="@+id/submitnoc"
+        android:fontFamily="@font/overpass_semibold"/>
+
+
+
+</RelativeLayout>

@@ -48,11 +48,56 @@
                 app:layout_constraintGuide_percent="0.5" />
 
             <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/womencard"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="#ffc0cb">
+                <!--                app:cardBackgroundColor="#fdf2de"-->
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/cd"
+                        android:src="@drawable/women"
+                        android:id="@+id/womenimage"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:textColor="#3d3c4d"
+                        android:text="Women Safety"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/womenimage"
+                        android:fontFamily="@font/overpass_semibold"
+                        android:gravity="center_horizontal"
+                        />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:id="@+id/fircard"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="12dp"
+                android:layout_marginTop="150dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="@id/cardguideline"
@@ -64,6 +109,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -80,8 +126,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:textSize="20sp"
-                    android:textColor="#000"
-                    android:text="FIR"
+                    android:textColor="#3d3c4d"
+                    android:text="e-FIR"
                     android:layout_centerHorizontal="true"
                     android:layout_below="@id/firimage"
                     android:fontFamily="@font/overpass_semibold"
@@ -97,6 +143,7 @@
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="12dp"
+                android:layout_marginTop="150dp"
                 android:id="@+id/StolenRecoveredcard"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/cardguideline"
@@ -106,6 +153,7 @@
 <!--                app:cardBackgroundColor="#f8ccd5"-->
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -122,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#3d3c4d"
                         android:text="Stolen/Recovered"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/stolenimage"
@@ -138,7 +186,7 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="300dp"
                 app:cardCornerRadius="12dp"
                 android:id="@+id/knowyourpolice"
                 app:layout_constraintTop_toTopOf="parent"
@@ -148,6 +196,7 @@
                 app:cardBackgroundColor="#fff">
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -164,7 +213,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#3d3c4d"
                         android:text="Know your police"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/policeimage"
@@ -180,7 +229,7 @@
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="12dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="300dp"
                 android:id="@+id/knowyourstate"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/cardguideline"
@@ -189,6 +238,7 @@
                 app:cardBackgroundColor="#fff">
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
                     <ImageView
                         android:layout_width="60dp"
@@ -204,7 +254,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#3d3c4d"
                         android:text="Know your state"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/stateimage"
@@ -220,7 +270,7 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
-                android:layout_marginTop="300dp"
+                android:layout_marginTop="450dp"
                 app:cardCornerRadius="12dp"
                 android:id="@+id/noc"
                 app:layout_constraintTop_toTopOf="parent"
@@ -230,6 +280,7 @@
                 app:cardBackgroundColor="#fff">
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -246,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#3d3c4d"
                         android:text="NOC"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/nocimage"
@@ -262,7 +313,7 @@
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="12dp"
-                android:layout_marginTop="300dp"
+                android:layout_marginTop="450dp"
                 android:id="@+id/verifications"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/cardguideline"
@@ -271,6 +322,7 @@
                 app:cardBackgroundColor="#fff">
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -288,7 +340,7 @@
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
                         android:textColor="#3d3c4d"
-                        android:text="Verifications"
+                        android:text="Approvals"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/verificationimage"
                         android:fontFamily="@font/overpass_semibold"
@@ -305,7 +357,7 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="600dp"
                 app:cardCornerRadius="12dp"
                 android:id="@+id/status"
                 app:layout_constraintTop_toTopOf="parent"
@@ -315,6 +367,7 @@
                 app:cardBackgroundColor="#fff">
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -331,7 +384,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#3d3c4d"
                         android:text="Status"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/statusimage"
@@ -347,7 +400,7 @@
                 android:layout_height="150dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="12dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="600dp"
                 android:id="@+id/stateservices"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/cardguideline"
@@ -356,6 +409,7 @@
                 app:cardBackgroundColor="#fff">
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -372,8 +426,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="State Services"
+                        android:textColor="#3d3c4d"
+                        android:text="Services"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/serviceimage"
                         android:fontFamily="@font/overpass_semibold"
@@ -382,6 +436,50 @@
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="12dp"
+                android:layout_marginTop="750dp"
+                android:id="@+id/logoutcard"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="#fff">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/cd"
+                        android:src="@drawable/logout"
+                        android:id="@+id/logoutimage"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:textColor="#3d3c4d"
+                        android:text="Log Out"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/logoutimage"
+                        android:fontFamily="@font/overpass_semibold"
+                        android:gravity="center_horizontal"
+                        />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="FIR Details"
+                android:textSize="18sp"
+                android:id="@+id/orderontheway"
+                android:fontFamily="@font/overpass_semibold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id:"
+                android:fontFamily="@font/overpass_semibold"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:id="@+id/orderhash"
+                android:layout_below="@id/orderontheway"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valueid"
+                android:text="sjbjdshjb"
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_toRightOf="@id/orderhash"
+                android:layout_margin="10dp"
+                android:layout_below="@id/orderontheway"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:text="address: "
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_below="@+id/valueid"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressvalue"
+                android:text="dfsnksdfj"
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_toRightOf="@+id/address"
+                android:layout_below="@+id/valueid"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/complaint"
+                android:text="complaint: "
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_below="@+id/address"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/complaintvalue"
+                android:text="sadbsadsda"
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_toRightOf="@+id/complaint"
+                android:layout_below="@+id/address"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dob"
+                android:text="DOB: "
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_below="@+id/complaint"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dobvalue"
+                android:text="sdabjksad"
+                android:layout_toRightOf="@+id/dob"
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_below="@+id/complaint"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderstatus"
+                android:text="Gender: "
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_below="@+id/dob"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gendervalue"
+                android:text="sabdasasd"
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_toRightOf="@+id/genderstatus"
+                android:layout_below="@+id/dob"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobileno"
+                android:text="Mobile No: "
+                android:fontFamily="@font/overpass_semibold"
+
+                android:layout_below="@+id/genderstatus"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobilevalue"
+                android:text="bjsadjbjdsa"
+                android:layout_toRightOf="@+id/mobileno"
+                android:layout_below="@+id/genderstatus"
+                android:fontFamily="@font/overpass_semibold"
+                android:layout_margin="10dp"
+                />
+            </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

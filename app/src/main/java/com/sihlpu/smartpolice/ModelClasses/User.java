@@ -1,16 +1,44 @@
 package com.sihlpu.smartpolice.ModelClasses;
 
-public class User {
+import java.io.Serializable;
 
-    private String email,uid,name,mobileno;
-    private long gender;
+public class User implements Serializable {
 
-    public User(String email, String uid, String name, long gender, String mobileno) {
+    private String email,uid,aadhaarno,mobileno,name,gender,a_uid;
+
+
+    public User(String email, String uid, String name, String mobileno, String aadhaarno, String gender,String a_uid) {
         this.email = email;
         this.uid = uid;
         this.name = name;
-        this.gender = gender;
         this.mobileno = mobileno;
+        this.aadhaarno = aadhaarno;
+        this.gender = gender;
+        this.a_uid = a_uid;
+    }
+
+    public String getA_uid() {
+        return a_uid;
+    }
+
+    public void setA_uid(String a_uid) {
+        this.a_uid = a_uid;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAadhaarno() {
+        return aadhaarno;
+    }
+
+    public void setAadhaarno(String aadhaarno) {
+        this.aadhaarno = aadhaarno;
     }
 
     public User() {
@@ -40,13 +68,6 @@ public class User {
         this.name = name;
     }
 
-    public long getGender() {
-        return gender;
-    }
-
-    public void setGender(long gender) {
-        this.gender = gender;
-    }
 
     public String getMobileno() {
         return mobileno;

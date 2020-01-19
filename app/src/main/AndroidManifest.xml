@@ -7,11 +7,14 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.Citizens.StateServices"></activity>
+        <activity android:name=".Activities.Beats.DutyAllocation"></activity>
+        <activity android:name=".Activities.Beats.Home" />
+        <activity android:name=".Activities.Citizens.WomenSafety" />
+        <activity android:name=".Activities.Citizens.StateServices" />
         <activity android:name=".Activities.Citizens.Status" />
         <activity android:name=".Activities.Citizens.Verifications" />
         <activity android:name=".Activities.Citizens.Noc" />
@@ -26,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.OptVerification" />
+        <activity android:name=".Activities.OtpVerification" />
         <activity android:name=".Activities.SignUpActivity" />
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.Citizens.MainActivity" />

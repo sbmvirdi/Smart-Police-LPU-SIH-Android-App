@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:paddingBottom="10dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/status"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/articleLabel"
+        android:text="Article:"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:layout_below="@id/status"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/article"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Article:"
+        android:layout_toRightOf="@id/articleLabel"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:layout_below="@id/status"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descLabel"
+        android:text="Description:"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/article"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:layout_marginLeft="10dp"
+        android:text="desc"
+        android:layout_toRightOf="@id/descLabel"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:layout_below="@id/article"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stationLabel"
+        android:text="Station:"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:layout_below="@id/desc"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/station"
+        android:text="Station"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/stationLabel"
+        android:textColor="#000"
+        android:fontFamily="@font/overpass_semibold"
+        android:textSize="15sp"
+        android:layout_below="@id/desc"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

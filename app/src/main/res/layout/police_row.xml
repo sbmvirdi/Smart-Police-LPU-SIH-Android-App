@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="State"
+                android:fontFamily="@font/overpass_semibold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/state"
+                android:text="district"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mailofstation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/district"
+                android:text="Division"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overpass_semibold" />
+
+            <TextView
+                android:id="@+id/inspectorofstationlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspector:"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/mailofstation"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/inspectorofstation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspector"
+                android:layout_toRightOf="@id/inspectorofstationlabel"
+                android:layout_below="@+id/mailofstation"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/phoneofstationlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inspectorofstation"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Email of Station:"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/phoneofstation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inspectorofstation"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/phoneofstationlabel"
+                android:layout_marginTop="8dp"
+                android:text="8888888888"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/constable_nolabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneofstationlabel"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="No of Sub Inspectors:"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/constable_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneofstationlabel"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="8"
+                android:layout_toEndOf="@+id/constable_nolabel"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/sub_inspector_nolabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/constable_nolabel"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Phone No of Station:"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/sub_inspector_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/constable_nolabel"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/sub_inspector_nolabel"
+                android:text="Sub Inspector No:"
+                android:fontFamily="@font/overpass_semibold"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/nameofstationlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sub_inspector_no"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="No of Constables"
+                android:fontFamily="@font/overpass_semibold"
+                 />
+
+            <TextView
+                android:id="@+id/nameofstation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sub_inspector_no"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/nameofstationlabel"
+                android:layout_marginTop="8dp"
+                android:text="Name"
+                android:fontFamily="@font/overpass_semibold"
+                />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

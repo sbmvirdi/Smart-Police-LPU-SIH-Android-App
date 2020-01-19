@@ -19,4 +19,6 @@
     <string name="aadhar_number">Aadhar Number</string>
     <string name="enter_otp">Enter OTP</string>
     <string name="please_enter_the_otp_sent_to_your_phone_number">Please Enter the OTP sent to your phone number</string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="disclaimer">Enter all details as per Aadhaar card</string>
 </resources>
