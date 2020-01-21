@@ -106,17 +106,10 @@ public class OtpVerification extends AppCompatActivity {
             @Override
             public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 super.onCodeSent(s, forceResendingToken);
-//                if (otp.getText().toString().equals(s)){
-//                    DatabaseReference rf = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
-//                    rf.setValue(user);
-//                    Intent i = new Intent(OtpVerification.this,MainActivity.class);
-//                    startActivity(i);
-//                    finish();
-//                }
+
                 OTP = s;
                 Log.e("Phone","Code Sent"+s);
                 progressDialog.hide();
-
 
             }
         };
