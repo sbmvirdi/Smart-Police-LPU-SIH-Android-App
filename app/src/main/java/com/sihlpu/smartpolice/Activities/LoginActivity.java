@@ -123,4 +123,10 @@ public class LoginActivity extends AppCompatActivity {
 
         return false;
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        progress.dismiss();
+    }
 }

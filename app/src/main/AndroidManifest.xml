@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.Beats.DutyAllocation"></activity>
+        <activity android:name=".Activities.dummy"></activity>
+        <activity android:name=".Activities.Beats.DutyAllocation" />
         <activity android:name=".Activities.Beats.Home" />
         <activity android:name=".Activities.Citizens.WomenSafety" />
         <activity android:name=".Activities.Citizens.StateServices" />

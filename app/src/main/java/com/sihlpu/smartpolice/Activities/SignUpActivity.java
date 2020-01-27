@@ -231,4 +231,10 @@ public class SignUpActivity extends AppCompatActivity {
 
         return false;
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        progressDialog.dismiss();
+    }
 }

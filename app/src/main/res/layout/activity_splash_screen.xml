@@ -9,11 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/cd"
         android:src="@drawable/splash_bg"/>
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:id="@+id/imageSplash"
         android:src="@drawable/logo"
         android:contentDescription="@string/cd"
@@ -32,8 +33,70 @@
         android:textColor="#000"
         android:text="Smart Police"
         android:layout_marginTop="40dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
+        android:id="@+id/appname"
         android:fontFamily="@font/overpass_semibold"
         />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appname"
+        >
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tangerine_bold"
+                android:gravity="center_horizontal"
+                android:text="Handcrafted "
+                android:layout_column="1"
+                android:textColor="#000"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tangerine_bold"
+                android:gravity="center_horizontal"
+                android:text="with  "
+                android:layout_column="1"
+                android:textColor="#000"
+                android:textSize="25sp"
+                />
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/love"
+                android:layout_column="3"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/cd"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tangerine_bold"
+                android:gravity="center_horizontal"
+                android:text="  in India"
+                android:layout_column="4"
+                android:textColor="#000"
+                android:textSize="25sp"
+                />
+        </TableRow>
+
+
+
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

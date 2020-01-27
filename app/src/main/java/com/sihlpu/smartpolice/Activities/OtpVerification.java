@@ -60,7 +60,7 @@ public class OtpVerification extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("please wait...");
         progressDialog.setCancelable(false);
-        progressDialog.show();
+        progressDialog.hide();
 
         user = (User) getIntent().getSerializableExtra("userModel");
 
@@ -79,21 +79,27 @@ public class OtpVerification extends AppCompatActivity {
 
                 String code = phoneAuthCredential.getSmsCode();
                 otp.setText(code);
-                mAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            user.setUid(mAuth.getCurrentUser().getUid());
-                            DatabaseReference rf = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
-                            rf.setValue(user);
-                            progressDialog.hide();
-                         Intent i = new Intent(OtpVerification.this, LoginActivity.class);
-                         mAuth.signOut();
-                         startActivity(i);
-                         finish();
-                        }
-                    }
-                });
+                Intent i = new Intent(OtpVerification.this,MainActivity.class);
+                startActivity(i);
+                finish();
+                DatabaseReference r = FirebaseDatabase.getInstance().getReference("Users");
+                r.child(user.getUid()).setValue(user);
+                progressDialog.hide();
+//                mAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()){
+//                            user.setUid(mAuth.getCurrentUser().getUid());
+//                            DatabaseReference rf = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
+//                            rf.setValue(user);
+//                            progressDialog.hide();
+//                         Intent i = new Intent(OtpVerification.this, LoginActivity.class);
+//                        // mAuth.signOut();
+//                         startActivity(i);
+//                         finish();
+//                        }
+//                    }
+//                });
             }
 
             @Override
@@ -101,6 +107,7 @@ public class OtpVerification extends AppCompatActivity {
                 progressDialog.hide();
                 Toast.makeText(OtpVerification.this, "verification Failed", Toast.LENGTH_SHORT).show();
                 Log.e("Failed Exception",e.getMessage()+"");
+                progressDialog.hide();
             }
 
             @Override
@@ -108,7 +115,7 @@ public class OtpVerification extends AppCompatActivity {
                 super.onCodeSent(s, forceResendingToken);
 
                 OTP = s;
-                Log.e("Phone","Code Sent"+s);
+                Log.e("Phone","Code Sent"+s+"\n"+forceResendingToken.toString()+"\n");
                 progressDialog.hide();
 
             }
@@ -137,6 +144,12 @@ public class OtpVerification extends AppCompatActivity {
                      DatabaseReference rf = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
                      rf.setValue(user);
                      PhoneAuthCredential credential = PhoneAuthProvider.getCredential(OTP,otp.getText().toString());
+//
+//                     if (credential.){
+//                         Toast.makeText(OtpVerification.this, "correct code", Toast.LENGTH_SHORT).show();
+//                     }else{
+//                         Toast.makeText(OtpVerification.this, "", Toast.LENGTH_SHORT).show();
+//                     }
                      mAuth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                          @Override
                          public void onComplete(@NonNull Task<AuthResult> task) {
@@ -148,6 +161,7 @@ public class OtpVerification extends AppCompatActivity {
                               progressDialog.hide();
                           }
                           else {
+
                               progressDialog.hide();
                               Toast.makeText(OtpVerification.this, "Verification failed!", Toast.LENGTH_SHORT).show();
                           }
@@ -188,5 +202,11 @@ public class OtpVerification extends AppCompatActivity {
     public void onBackPressed() {
         //super.onBackPressed();
         Toast.makeText(this, "complete the process first!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        progressDialog.dismiss();
     }
 }

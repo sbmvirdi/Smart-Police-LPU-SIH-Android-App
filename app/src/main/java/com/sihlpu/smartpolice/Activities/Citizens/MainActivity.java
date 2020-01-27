@@ -38,17 +38,20 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         dialog = new ProgressDialog(this);
         dialog.setCancelable(false);
-        dialog.setMessage("Personalizaion your dashboard");
+        dialog.setMessage("Personalizing your dashboard");
         dialog.show();
 
-        if (mAuth.getCurrentUser()== null){
+        if (mAuth.getCurrentUser() == null){
             Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
             finish();
         }
         else{
             uid = mAuth.getCurrentUser().getUid();
+
         }
+
+        Toast.makeText(this, "uid:"+uid, Toast.LENGTH_SHORT).show();
 
 
 
